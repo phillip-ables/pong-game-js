@@ -32,6 +32,8 @@ class Ball extends Rect
   }
 }
 
+
+//we can use this ball as a basis for painting the ball
 const ball = new Ball;
 console.log(ball);
 
@@ -44,4 +46,4 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 
 //drawl Ball
 context.fillStyle = "#fff";
-context.fillRect(0, 0, 10, 10);
+context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
