@@ -32,14 +32,21 @@ class Ball extends Rect
   }
 }
 
-
-//we can use this ball as a basis for painting the ball
-const ball = new Ball;
-console.log(ball);
-
 //we have a black rectangle canvas
 const canvas = document.getElementById('pong');
 const context = canvas.getContext('2d');
+
+//we can use this ball as a basis for painting the ball
+const ball = new Ball;
+
+//animate the balls
+//update function that takes time
+function update(dt){
+  // updates the balls position
+  //position of ball is relative to the change in velocity
+  this.ball.pos.x += ball.vel.x * dt;
+  this.ball.pos.y += ball.vel.y * dt
+}
 
 context.fillStyle = '#000';
 context.fillRect(0, 0, canvas.width, canvas.height);
